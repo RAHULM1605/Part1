@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GrooveNexus</string>
+    <string name="nav1">Home</string>
+    <string name="nav2">Playlist</string>
+    <string name="nav3">Artists</string>
+    <string name="nav4">Settings</string>
+</resources>
