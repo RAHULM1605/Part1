@@ -7,12 +7,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FDFDFE"
-    tools:context=".MainScreen">
+    tools:context=".MainScreenFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="595dp"
-        app:layout_constraintBottom_toTopOf="@id/navigation"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="-55dp">
@@ -96,7 +95,7 @@
                 android:id="@+id/linearlayout1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="4dp"
+                android:layout_marginStart="2dp"
                 android:orientation="horizontal"
                 android:scrollbars="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -141,17 +140,17 @@
         </ScrollView>
     </RelativeLayout>
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#FDFDFE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav" />
+    <!--<android.support.design.widget.BottomNavigationView-->
+        <!--android:id="@+id/navigation"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="#FDFDFE"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="1.0"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:menu="@menu/bottom_nav" />-->
 
 </android.support.constraint.ConstraintLayout>
 

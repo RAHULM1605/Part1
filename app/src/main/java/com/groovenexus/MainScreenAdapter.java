@@ -15,7 +15,8 @@ import java.util.ArrayList;
 
 public class MainScreenAdapter extends RecyclerView.Adapter<MainScreenAdapter.MyViewHolder> {
 
-    public ArrayList<MainScreen.NewsBox> exampleList;
+    public ArrayList<MainScreenFragment.NewsBox> exampleList;
+//    ArtistItem[] items;
     private Context context;
 
     private boolean leftImg = true;
@@ -32,9 +33,14 @@ public class MainScreenAdapter extends RecyclerView.Adapter<MainScreenAdapter.My
         }
     }
 
-    public MainScreenAdapter(Context context, ArrayList<MainScreen.NewsBox> list) {
+    public MainScreenAdapter(Context context, ArrayList<MainScreenFragment.NewsBox> list) {
         this.context = context;
         exampleList = list;
+    }
+    public MainScreenAdapter(Context context, ArtistItem[] items)
+    {
+        this.context = context;
+//        this.items = items;
     }
 
     @NonNull
@@ -55,16 +61,20 @@ public class MainScreenAdapter extends RecyclerView.Adapter<MainScreenAdapter.My
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int position) {
-//        MainScreen.NewsBox currentBox = exampleList.get(position);
+//        MainScreenFragment.NewsBox currentBox = exampleList.get(position);
 //
 //        myViewHolder.imageView.setImageResource(currentBox.pic);
 //        myViewHolder.textView1.setText(currentBox.text1);
 //        myViewHolder.textView2.setText(currentBox.text2);
 
-        MainScreen.NewsBox box = exampleList.get(position);
+        MainScreenFragment.NewsBox box = exampleList.get(position);
 
         String image = box.pic;
         String name = box.text1;
+
+//        ArtistItem item = items[position];
+//        String image = item.getImgUrl();
+//        String name = item.getDisplayName();
 
         myViewHolder.textView1.setText(name);
         Picasso.with(context).load(image).fit().centerInside().into(myViewHolder.imageView);

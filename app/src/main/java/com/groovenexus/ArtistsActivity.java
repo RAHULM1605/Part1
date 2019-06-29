@@ -1,5 +1,6 @@
 package com.groovenexus;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -62,6 +65,7 @@ public class ArtistsActivity extends AppCompatActivity {
 class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.MyViewHolder> {
 
     public ArrayList<Artist> exampleList;
+    private Context context;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         public ImageView imageView;
@@ -89,7 +93,7 @@ class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int position) {
         Artist currentArtist = exampleList.get(position);
 
-        myViewHolder.imageView.setImageResource(currentArtist.pic);
+        Picasso.with(context).load(currentArtist.pic).resize(340,340).into(myViewHolder.imageView);
         myViewHolder.textView.setText(currentArtist.text);
     }
 

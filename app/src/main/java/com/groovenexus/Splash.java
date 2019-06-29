@@ -17,7 +17,7 @@ public class Splash extends AppCompatActivity {
             @Override
             public void run()
             {
-                startActivity(new Intent(Splash.this,MainScreen.class));
+                startActivity(new Intent(Splash.this,BottomNavigationActivity.class));
                 finish();
             }
         },SPLASH_TIME);
