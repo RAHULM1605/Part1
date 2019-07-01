@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlogActivity">
+
+    <RelativeLayout
+        android:id="@+id/blogHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E6292B"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/colored_back"
+            android:textColor="#757575" />
+
+        <TextView
+            android:id="@+id/playlistText"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="31dp"
+            android:layout_marginEnd="-171dp"
+            android:layout_toStartOf="@+id/back"
+            android:layout_toEndOf="@+id/back"
+            android:text="Blog"
+            android:textColor="@color/myBackground"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="546dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/blogHead"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/blogTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="This is the sample text written on the top of the screen"
+                android:textColor="@color/CustomTextColor"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/blogAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="By Lorem Ipsum"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@id/blogTitle"
+                app:layout_constraintTop_toBottomOf="@id/blogTitle" />
+
+            <TextView
+                android:id="@+id/blogDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25 June | 1 min read"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="@id/blogTitle"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/blogAuthor"
+                app:layout_constraintTop_toTopOf="@id/blogAuthor" />
+
+            <ImageView
+                android:id="@+id/blogImage1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/blog_image1"
+                app:layout_constraintEnd_toEndOf="@+id/blogDate"
+                app:layout_constraintStart_toStartOf="@+id/blogAuthor"
+                app:layout_constraintTop_toBottomOf="@id/blogAuthor"
+                tools:layout_editor_absoluteY="95dp" />
+
+            <TextView
+                android:id="@+id/blogPara1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:text="As this is just a custom ImageView and not a custom Drawable or a combination of both, it can be used with all kinds of drawables, i.e. a PicassoDrawable from Picasso or other non-standard drawables (needs some testing though).\n\nAs this is just a custom ImageView and not a custom Drawable or a combination of both, it can be used with all kinds of drawables, i.e. a PicassoDrawable from Picasso or other non-standard drawables (needs some testing though).\n\nAs this is just a custom ImageView and not a custom Drawable or a combination of both, it can be used with all kinds of drawables, i.e. a PicassoDrawable from Picasso or other non-standard drawables (needs some testing though)."
+                android:textColor="#000000"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@id/blogImage1"
+                app:layout_constraintStart_toStartOf="@id/blogImage1"
+                app:layout_constraintTop_toBottomOf="@id/blogImage1" />
+
+            <TextView
+                android:id="@+id/blogSubHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="Lorem Ipsum"
+                android:textColor="@color/CustomTextColor"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/blogPara1"
+                app:layout_constraintTop_toBottomOf="@id/blogPara1" />
+
+            <ImageView
+                android:id="@+id/blogImage2"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/blog_image2"
+                app:layout_constraintEnd_toEndOf="@+id/blogSubHeading"
+                app:layout_constraintStart_toStartOf="@id/blogSubHeading"
+                app:layout_constraintTop_toBottomOf="@id/blogSubHeading"
+                tools:layout_editor_absoluteY="95dp" />
+
+            <TextView
+                android:id="@+id/blogPara2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:text="As this is just a custom ImageView and not a custom Drawable or a combination of both, it can be used with all kinds of drawables, i.e. a PicassoDrawable from Picasso or other non-standard drawables (needs some testing though).\n\nAs this is just a custom ImageView and not a custom Drawable or a combination of both, it can be used with all kinds of drawables, i.e. a PicassoDrawable from Picasso or other non-standard drawables (needs some testing though).\n\nAs this is just a custom ImageView and not a custom Drawable or a combination of both, it can be used with all kinds of drawables, i.e. a PicassoDrawable from Picasso or other non-standard drawables (needs some testing though)."
+                android:textColor="#000000"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@id/blogImage2"
+                app:layout_constraintHorizontal_bias="0.666"
+                app:layout_constraintStart_toStartOf="@id/blogImage2"
+                app:layout_constraintTop_toBottomOf="@id/blogImage2" />
+
+            <TextView
+                android:id="@+id/postViewsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Post Views : "
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@id/blogPara2"
+                app:layout_constraintTop_toBottomOf="@id/blogPara2" />
+
+            <TextView
+                android:id="@+id/postViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60"
+                android:textColor="@color/CustomTextColor"
+                app:layout_constraintBottom_toBottomOf="@id/postViewsText"
+                app:layout_constraintStart_toEndOf="@id/postViewsText"
+                app:layout_constraintTop_toTopOf="@id/postViewsText" />
+
+            <TextView
+                android:id="@+id/grooveclasses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="GrooveClasses"
+                android:textColor="@color/CustomTextColor"
+                app:layout_constraintStart_toStartOf="@id/postViewsText"
+                app:layout_constraintTop_toBottomOf="@id/postViewsText" />
+
+            <TextView
+                android:id="@+id/ratingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Rate the article"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@id/grooveclasses"
+                app:layout_constraintTop_toBottomOf="@id/grooveclasses" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:numStars="5"
+                android:rating="4"
+                android:stepSize="1"
+                app:layout_constraintBottom_toBottomOf="@id/ratingText"
+                app:layout_constraintStart_toEndOf="@+id/ratingText"
+                app:layout_constraintTop_toBottomOf="@id/grooveclasses"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/commentsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:text="Comment"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@id/ratingText"
+                app:layout_constraintTop_toBottomOf="@id/ratingText" />
+
+            <ImageView
+                android:id="@+id/commentBackground"
+                android:layout_width="261dp"
+                android:layout_height="102dp"
+                android:layout_marginTop="8dp"
+                android:textSize="12sp"
+                android:textAlignment="viewStart"
+                android:background="@drawable/blog_comments_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/commentsText"
+                app:layout_constraintTop_toBottomOf="@id/commentsText" />
+
+            <EditText
+                android:id="@+id/commentBox"
+                android:layout_width="255dp"
+                android:layout_height="wrap_content"
+                android:background="#F1F1F1"
+                android:maxHeight="95dp"
+                android:textSize="12sp"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/commentsText"
+                app:layout_constraintTop_toBottomOf="@id/commentsText"
+                app:layout_constraintVertical_bias="0.109" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/myBackground"
+        app:itemIconTint="@color/CustomTextColor"
+        app:itemTextColor="@color/CustomTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav" />
+
+</android.support.constraint.ConstraintLayout>

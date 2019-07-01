@@ -1,6 +1,7 @@
 package com.groovenexus;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -30,6 +31,8 @@ import org.json.JSONObject;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 
 /**
@@ -112,9 +115,17 @@ public class MainScreenFragment extends Fragment {
         horizontalLayout = v.findViewById(R.id.linearlayout1);
         recyclerView = v.findViewById(R.id.recyclerView);
 
+        v.findViewById(R.id.mainscreenLogo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(),BlogActivity.class));
+            }
+        });
+
         for (int i = 0; i < 10; i++) {
-            ImageView view = new ImageView(v.getContext());
-            Picasso.with(v.getContext()).load(R.drawable.artistsample).resize(275, 275).into(view);
+            CircleImageView view = new CircleImageView(v.getContext());
+            Picasso.with(v.getContext()).load(R.drawable.artistsample2).resize(245, 245).into(view);
+            view.setPadding(16,4,16,4);
             horizontalLayout.addView(view);
         }
 
@@ -122,34 +133,13 @@ public class MainScreenFragment extends Fragment {
 
         recyclerView.setHasFixedSize(true);
 
-//
-        String exampleText1 = "Hello world", exampleText2 = "If you smell what the Rock is Cooking!!! And that's the bottomline, coz Stone Cold said so!!!";
+//        String exampleText1 = "Hello world", exampleText2 = "If you smell what the Rock is Cooking!!! And that's the bottomline, coz Stone Cold said so!!!";
 //        for(int i=0;i<20;i++)
 //            list.add(new NewsBox("https://www.groovenexus.com/wp-content/uploads/rythdmdee.jpg",exampleText1/*,exampleText2,false*/));
 
         parseJSON();
-//        ArtistItem[] items;
-//        String url = "https://www.demo.groovenexus.info/wp-json/mobileapp/v1/djmeta?artist_type=Disc%20Jockey";
-//        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-//            @Override
-//            public void onResponse(String response) {
-//                GsonBuilder gsonBuilder = new GsonBuilder();
-//                Gson gson = gsonBuilder.create();
-//                items = gson.fromJson(response,ArtistItem[].class);
-//                for(int i=0;i<items.length;i++)
-//                    list.add(new NewsBox(items[i].getImgUrl(),items[i].getDisplayName()));
-//            }
-//        }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//                Toast.makeText(getContext(),"Something went wrong", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//        RequestQueue requestQueue = Volley.newRequestQueue(v.getContext());
-//        requestQueue.add(stringRequest);
-
-        adapter = new MainScreenAdapter(v.getContext(),list);
-        recyclerView.setAdapter(adapter);
+//        adapter = new MainScreenAdapter(v.getContext(),list);
+//        recyclerView.setAdapter(adapter);
 
         layoutManager = new LinearLayoutManager(v.getContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -204,7 +194,7 @@ public class MainScreenFragment extends Fragment {
             public void onResponse(String response) {
                 GsonBuilder gsonBuilder = new GsonBuilder();
                 Gson gson = gsonBuilder.create();
-                ArtistItem[] items = gson.fromJson(response,ArtistItem[].class);
+                items = gson.fromJson(response,ArtistItem[].class);
 
                 for(int i = 0; i<items.length; i++)
                 {

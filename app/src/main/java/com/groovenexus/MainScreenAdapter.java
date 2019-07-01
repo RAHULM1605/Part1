@@ -50,10 +50,12 @@ public class MainScreenAdapter extends RecyclerView.Adapter<MainScreenAdapter.My
         if(leftImg)
         {
             view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.news_box,viewGroup,false);
+            leftImg = false;
         }
         else
         {
             view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.news_box2,viewGroup,false);
+            leftImg = true;
         }
 
         return new MyViewHolder(view);
