@@ -1,6 +1,7 @@
 package com.groovenexus;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -70,6 +71,13 @@ public class PlaylistFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.activity_playlist, container, false);
+
+        v.findViewById(R.id.playlistText).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(),Playlist2.class));
+            }
+        });
 
         RecyclerView recyclerView = v.findViewById(R.id.recyclerViewPlaylist);
         RecyclerView.Adapter adapter;

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BlogActivity">
+    tools:context=".Playlist2">
 
     <RelativeLayout
-        android:id="@+id/blogHead"
+        android:id="@+id/playlist2Head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#E6292B"
@@ -27,7 +27,7 @@
             android:textColor="#757575" />
 
         <TextView
-            android:id="@+id/blogText"
+            android:id="@+id/playlist2Text"
             android:layout_width="124dp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -35,7 +35,7 @@
             android:layout_marginEnd="-171dp"
             android:layout_toStartOf="@+id/back"
             android:layout_toEndOf="@+id/back"
-            android:text="Blog"
+            android:text="Playlist"
             android:textColor="@color/myBackground"
             android:textSize="24sp" />
 
@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/blogHead"
+        app:layout_constraintTop_toBottomOf="@id/playlist2Head"
         app:layout_constraintVertical_bias="0.0">
 
         <android.support.constraint.ConstraintLayout
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/blogTitle"
+                android:id="@+id/playlist2Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
@@ -75,41 +75,41 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/blogAuthor"
+                android:id="@+id/playlist2Author"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="By Lorem Ipsum"
                 android:textColor="#000000"
-                app:layout_constraintStart_toStartOf="@id/blogTitle"
-                app:layout_constraintTop_toBottomOf="@id/blogTitle" />
+                app:layout_constraintStart_toStartOf="@id/playlist2Title"
+                app:layout_constraintTop_toBottomOf="@id/playlist2Title" />
 
             <TextView
-                android:id="@+id/blogDate"
+                android:id="@+id/playlist2Date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="25 June | 1 min read"
                 android:textColor="#000000"
-                app:layout_constraintEnd_toEndOf="@id/blogTitle"
+                app:layout_constraintEnd_toEndOf="@id/playlist2Title"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@id/blogAuthor"
-                app:layout_constraintTop_toTopOf="@id/blogAuthor" />
+                app:layout_constraintStart_toEndOf="@id/playlist2Author"
+                app:layout_constraintTop_toTopOf="@id/playlist2Author" />
 
             <ImageView
-                android:id="@+id/blogImage1"
+                android:id="@+id/playlist2Image1"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="12dp"
                 android:background="@drawable/blog_image1"
-                app:layout_constraintEnd_toEndOf="@+id/blogDate"
-                app:layout_constraintStart_toStartOf="@+id/blogAuthor"
-                app:layout_constraintTop_toBottomOf="@id/blogAuthor"
+                app:layout_constraintEnd_toEndOf="@+id/playlist2Date"
+                app:layout_constraintStart_toStartOf="@+id/playlist2Author"
+                app:layout_constraintTop_toBottomOf="@id/playlist2Author"
                 tools:layout_editor_absoluteY="95dp" />
 
             <TextView
-                android:id="@+id/blogPara1"
+                android:id="@+id/playlist2Para1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
@@ -118,12 +118,12 @@
                 android:text="As this is just a custom ImageView and not a custom Drawable or a combination of both, it can be used with all kinds of drawables, i.e. a PicassoDrawable from Picasso or other non-standard drawables (needs some testing though).\n\nAs this is just a custom ImageView and not a custom Drawable or a combination of both, it can be used with all kinds of drawables, i.e. a PicassoDrawable from Picasso or other non-standard drawables (needs some testing though).\n\nAs this is just a custom ImageView and not a custom Drawable or a combination of both, it can be used with all kinds of drawables, i.e. a PicassoDrawable from Picasso or other non-standard drawables (needs some testing though)."
                 android:textColor="#000000"
                 android:textSize="12sp"
-                app:layout_constraintEnd_toEndOf="@id/blogImage1"
-                app:layout_constraintStart_toStartOf="@id/blogImage1"
-                app:layout_constraintTop_toBottomOf="@id/blogImage1" />
+                app:layout_constraintEnd_toEndOf="@id/playlist2Image1"
+                app:layout_constraintStart_toStartOf="@id/playlist2Image1"
+                app:layout_constraintTop_toBottomOf="@id/playlist2Image1" />
 
             <TextView
-                android:id="@+id/blogSubHeading"
+                android:id="@+id/playlist2SubHeading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
@@ -133,36 +133,48 @@
                 android:textColor="@color/CustomTextColor"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@id/blogPara1"
-                app:layout_constraintTop_toBottomOf="@id/blogPara1" />
+                app:layout_constraintStart_toStartOf="@id/playlist2Para1"
+                app:layout_constraintTop_toBottomOf="@id/playlist2Para1" />
 
-            <ImageView
-                android:id="@+id/blogImage2"
+            <VideoView
+                android:id="@+id/playlist2Video"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="12dp"
                 android:background="@drawable/blog_image2"
-                app:layout_constraintEnd_toEndOf="@+id/blogSubHeading"
-                app:layout_constraintStart_toStartOf="@id/blogSubHeading"
-                app:layout_constraintTop_toBottomOf="@id/blogSubHeading"
+                app:layout_constraintEnd_toEndOf="@+id/playlist2SubHeading"
+                app:layout_constraintStart_toStartOf="@id/playlist2SubHeading"
+                app:layout_constraintTop_toBottomOf="@id/playlist2SubHeading"
                 tools:layout_editor_absoluteY="95dp" />
 
             <TextView
-                android:id="@+id/blogPara2"
+                android:id="@+id/playlist2SubHeading2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="Lorem Ipsum"
+                android:textColor="@color/CustomTextColor"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/playlist2Video"
+                app:layout_constraintTop_toBottomOf="@id/playlist2Video" />
+
+            <VideoView
+                android:id="@+id/playlist2Video2"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="12dp"
-                android:text="As this is just a custom ImageView and not a custom Drawable or a combination of both, it can be used with all kinds of drawables, i.e. a PicassoDrawable from Picasso or other non-standard drawables (needs some testing though).\n\nAs this is just a custom ImageView and not a custom Drawable or a combination of both, it can be used with all kinds of drawables, i.e. a PicassoDrawable from Picasso or other non-standard drawables (needs some testing though).\n\nAs this is just a custom ImageView and not a custom Drawable or a combination of both, it can be used with all kinds of drawables, i.e. a PicassoDrawable from Picasso or other non-standard drawables (needs some testing though)."
-                android:textColor="#000000"
-                android:textSize="12sp"
-                app:layout_constraintEnd_toEndOf="@id/blogImage2"
-                app:layout_constraintHorizontal_bias="0.666"
-                app:layout_constraintStart_toStartOf="@id/blogImage2"
-                app:layout_constraintTop_toBottomOf="@id/blogImage2" />
+                android:background="@drawable/blog_image2"
+                app:layout_constraintEnd_toEndOf="@+id/playlist2SubHeading2"
+                app:layout_constraintStart_toStartOf="@id/playlist2SubHeading2"
+                app:layout_constraintTop_toBottomOf="@id/playlist2SubHeading2"
+                tools:layout_editor_absoluteY="95dp" />
 
             <TextView
                 android:id="@+id/postViewsText"
@@ -171,8 +183,8 @@
                 android:layout_marginTop="8dp"
                 android:text="Post Views : "
                 android:textColor="#000000"
-                app:layout_constraintStart_toStartOf="@id/blogPara2"
-                app:layout_constraintTop_toBottomOf="@id/blogPara2" />
+                app:layout_constraintStart_toStartOf="@id/playlist2Video2"
+                app:layout_constraintTop_toBottomOf="@id/playlist2Video2" />
 
             <TextView
                 android:id="@+id/postViews"
